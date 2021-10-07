@@ -1,4 +1,7 @@
 const pokemonUrl = (id) => `https://pokeapi.co/api/v2/pokemon/${id}`;
+const filterInput = document.querySelector('#filter-pokemon');
+const listPokemons = document.getElementsByClassName('card');
+
 
 const fetchPokemon = () => {
     const pokemonArray = [];
@@ -28,4 +31,32 @@ const fetchPokemon = () => {
         })
 }
 
+const searchPokemon = () => {
+    filterInput.addEventListener('input', (x) => {
+        console.log(x.target.value);
+    if(x.target.value.length > 0) {
+        for(let index = 0; index < listPokemons.length; index +=1){
+            const currentPokemon = listPokemons[index];
+            const pokemonName = currentPokemon.querySelector('.card-title');
+            const name = pokemonName.textContent;
+            console.log(name);
+            if(name != x.target.value) {
+                currentPokemon.classList.add('invisible');
+            } else {
+                currentPokemon.classList.remove('invisible');      
+            }
+         }
+        } else {
+         for(let index = 0; index < listPokemons.length; index +=1) {
+             const currentPokemon = listPokemons[index];
+             currentPokemon.classList.remove('invisible');
+         }
+    }
+     
+    });
+}
+
+
 fetchPokemon();
+searchPokemon();
+    

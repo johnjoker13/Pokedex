@@ -119,6 +119,15 @@ h1 {
 	z-index: 2;
 }
 
+.fadeOut {
+	opacity: 0;
+	transition: 0.5s;
+}
+
+.invisible {
+	display: none;
+}
+
 @keyframes bounce {
 	20% {
 			transform: translateY(-6px);

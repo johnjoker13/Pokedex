@@ -5,4 +5,4 @@
 ## Skills exercised ![Hitmonlee](https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/106.png)
   - Promise
   - Fetch Api
-  - Object, Array Manipulation
+  - Object, Array, DOM Manipulation

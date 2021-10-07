@@ -33,14 +33,13 @@ const fetchPokemon = () => {
 
 const searchPokemon = () => {
   filterInput.addEventListener("input", (x) => {
-    console.log(x.target.value);
     if (x.target.value.length > 0) {
       for (let index = 0; index < listPokemons.length; index += 1) {
         const currentPokemon = listPokemons[index];
         const pokemonName = currentPokemon.querySelector(".card-title");
         const name = pokemonName.textContent;
-        console.log(name);
-        if (name != x.target.value) {
+        let exp = new RegExp(x.target.value, "i");
+        if (!exp.test(name)) {
           currentPokemon.classList.add("invisible");
         } else {
           currentPokemon.classList.remove("invisible");

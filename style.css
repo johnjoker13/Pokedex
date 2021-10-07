@@ -119,6 +119,22 @@ h1 {
 	z-index: 2;
 }
 
+.filter-container {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+}
+
+.label-filter {
+	font-size: 2em;
+}
+
+.poke-filter {
+	text-align: center;
+	height: 15%;
+	align-self: center;
+}
+
 .fadeOut {
 	opacity: 0;
 	transition: 0.5s;

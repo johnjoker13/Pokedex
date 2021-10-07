@@ -3,7 +3,7 @@ const pokemonUrl = (id) => `https://pokeapi.co/api/v2/pokemon/${id}`;
 const fetchPokemon = () => {
     const pokemonArray = [];
 
-    for(let i = 1; i <= 150; i += 1) {
+    for(let i = 1; i <= 151; i += 1) {
         pokemonArray.push(fetch(pokemonUrl(i)).then(resp => resp.json()))
     }
 
